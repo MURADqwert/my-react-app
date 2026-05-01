@@ -1,12 +1,19 @@
+import { Suspense } from 'react';
 import './App.css';
 import Countries from './Components/Countries/Countries';
 
 
+
 function App() {
+  const countriesPromis = fetch('https://openapi.programming-hero.com/api/all')
+.then(res=> res.json())
   return (
     <div>
-      <h3>World Tour..</h3>
-      <Countries></Countries>
+      
+      <Suspense fallback= {<p>Data Loading..</p>}>
+        <Countries countriesPromis={countriesPromis}>
+        </Countries>
+      </Suspense>
     </div>
     
   );

@@ -191,3 +191,10 @@
   background-color: cadetblue;
   margin: 20px;
 }
+.design-border{
+  border : 2px solid maroon;
+  border-radius: 20px;
+  background-color :olive
+  color: whitesmoke;
+  padding: 20px;
+}
